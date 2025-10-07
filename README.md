@@ -1,8 +1,45 @@
 # 🎬 MERN Netflix Clone
 
+[![Deploy to GitHub Pages](https://github.com/Mustafa1998-tech/mern-netflix-clone/actions/workflows/deploy.yml/badge.svg)](https://github.com/Mustafa1998-tech/mern-netflix-clone/actions/workflows/deploy.yml)
+
+A full-stack Netflix clone built with the MERN stack (MongoDB, Express.js, React.js, Node.js) and Tailwind CSS. This application replicates core Netflix features including user authentication, movie browsing, and video playback.
+
+🌐 **Live Demo**: [View on GitHub Pages](https://mustafa1998-tech.github.io/mern-netflix-clone/)
+
 A full-stack Netflix clone built with the MERN stack (MongoDB, Express.js, React.js, Node.js) and Tailwind CSS. This application replicates core Netflix features including user authentication, movie browsing, and video playback.
 
 ![Demo App](/frontend/public/screenshot-for-readme.png)
+
+## 🚀 Deployment
+
+This project is set up for automatic deployment to GitHub Pages. Here's how it works:
+
+1. The GitHub Actions workflow (`.github/workflows/deploy.yml`) will automatically build and deploy the frontend to the `gh-pages` branch on every push to `main`.
+2. The frontend is configured to work with GitHub Pages using the base path `/mern-netflix-clone/`.
+3. Client-side routing is handled by a `_redirects` file that ensures all routes are redirected to `index.html`.
+
+### Manual Deployment
+
+If you need to deploy manually:
+
+```bash
+# Build the frontend
+cd frontend
+npm run build
+
+# Deploy using gh-pages
+npm install --save-dev gh-pages
+
+# Add this to your package.json
+# "homepage": "https://mustafa1998-tech.github.io/mern-netflix-clone",
+# "scripts": {
+#   "predeploy": "npm run build",
+#   "deploy": "gh-pages -d dist"
+# }
+
+# Then run:
+npm run deploy
+```
 
 ## ✨ Features
 
